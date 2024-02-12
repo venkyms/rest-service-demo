@@ -5,7 +5,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout source code from Git
-                git 'https://github.com/venkyms/rest-service-demo.git'
+                // git 'https://github.com/venkyms/rest-service-demo.git'
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/venkyms/rest-service-demo.git']]])
             }
         }
         stage('Build') {
