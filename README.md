@@ -16,7 +16,7 @@ git push -u origin master # did not work for the first time
 git push origin main # will error out for the password, generate token at https://github.com/settings/tokens
 
 
-git remote set-url origin https://<token>@github.com/venkyms/rest-service-demo
+git remote set-url origin https://\<token\>@github.com/venkyms/rest-service-demo
 
 git push origin main
 
