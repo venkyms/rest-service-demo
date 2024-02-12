@@ -1,5 +1,7 @@
 git init
+
 git status
+
 git add .
 git status
 git commit -m "initial commit for rest service demo"
