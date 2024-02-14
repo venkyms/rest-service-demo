@@ -21,3 +21,7 @@ git remote set-url origin https://\<token\>@github.com/venkyms/rest-service-demo
 git push origin main
 
 git pull orgin main # ---> to pull latest
+
+
+#to clone
+git clone https://github.com/venkyms/rest-service-demo.git
