@@ -24,4 +24,13 @@ git pull orgin main # ---> to pull latest
 
 
 #to clone
+
 git clone https://github.com/venkyms/rest-service-demo.git
+
+
+
+http://localhost:8085/greeting?name=User
+
+
+Set your username: git config --global user.name "FIRST_NAME LAST_NAME"
+Set your email address: git config --global user.email "MY_NAME@example.com"
