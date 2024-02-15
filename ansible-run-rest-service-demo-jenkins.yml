@@ -1,0 +1,25 @@
+---
+- name: Run rest-service-demo application
+  hosts: localhost
+  become: false
+  vars:
+    app_name: rest-service-demo
+    app_jar: /Users/v/.jenkins/workspace/rest-service-demo-test/target/rest-service-demo-0.0.1-SNAPSHOT.jar
+    java_home: /usr/local/opt/sdkman-cli/libexec/candidates/java/current  # Adjust as per your Java installation path
+
+  tasks:
+    - name: Copy rest-service-demo application JAR file
+      copy:
+        src: "{{ app_jar }}"
+        dest: "/Users/v/ansible-deploy/{{ app_name }}.jar"
+
+    - name: Configure environment variables
+      lineinfile:
+        dest: ~/.zshrc
+        line: "export JAVA_HOME={{ java_home }}"
+        insertafter: EOF
+
+    - name: Start rest-service-demo application
+      shell: "java -jar /Users/v/ansible-deploy/{{ app_name }}.jar"
+      async: 0
+      poll: 0

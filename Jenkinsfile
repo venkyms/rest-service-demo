@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Run Ansible playbook to deploy the Spring Boot application
-                sh 'ansible-playbook ansible-run-rest-service-demo.yml'
+                sh 'ansible-playbook ansible-run-rest-service-jenkins.yml'
             }
         }
     }
