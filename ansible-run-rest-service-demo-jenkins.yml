@@ -20,5 +20,5 @@
         insertafter: EOF
 
     - name: Start rest-service-demo application
-      shell: "java -jar /Users/v/ansible-deploy/{{ app_name }}.jar &"
-      # shell: "java -jar /Users/v/ansible-deploy/{{ app_name }}.jar"
+      # shell: "java -jar /Users/v/ansible-deploy/{{ app_name }}.jar &"
+      shell: "java -jar /Users/v/ansible-deploy/{{ app_name }}.jar"
