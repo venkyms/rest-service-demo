@@ -1,7 +1,7 @@
 ---
 - name: Run rest-service-demo application
   hosts: localhost
-  become: true
+  become: false
   vars:
     app_name: rest-service-demo
     app_jar: /Users/v/.jenkins/workspace/rest-service-demo-test/target/rest-service-demo-0.0.1-SNAPSHOT.jar
