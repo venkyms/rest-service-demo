@@ -11,7 +11,7 @@
     - name: Copy rest-service-demo application JAR file
       copy:
         src: "{{ app_jar }}"
-        dest: "/Users/v/.jenkins/workspace/rest-service-demo-test/ansible-deploy/{{ app_name }}.jar"
+        dest: "/Users/v/.jenkins/workspace/rest-service-demo-test/{{ app_name }}.jar"
         # dest: "/Users/v/ansible-deploy/{{ app_name }}.jar"
 
     - name: Configure environment variables
@@ -21,4 +21,4 @@
         insertafter: EOF
 
     - name: Start rest-service-demo application
-      shell: "nohup java -jar /Users/v/.jenkins/workspace/rest-service-demo-test/ansible-deploy/{{ app_name }}.jar > /Users/v/.jenkins/workspace/rest-service-demo-test/ansible-deploy/{{ app_name }}.log 2>&1 &"
+      shell: "nohup java -jar /Users/v/.jenkins/workspace/rest-service-demo-test/{{ app_name }}.jar > /Users/v/.jenkins/workspace/rest-service-demo-test/{{ app_name }}.log 2>&1 &"
