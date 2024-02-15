@@ -13,6 +13,7 @@
         src: "{{ app_jar }}"
         dest: "/Users/v/.jenkins/workspace/rest-service-demo-test/{{ app_name }}.jar"
         # dest: "/Users/v/ansible-deploy/{{ app_name }}.jar"
+        mode: "+x"  # Add this line to set the executable permission
 
     - name: Configure environment variables
       lineinfile:
